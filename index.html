@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Rating Component</title>
+    <script src="assets/script.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
+  </head>
+  <body>
+    <div class="component">
+      <header class="component__header">
+        <div class="component__icon">
+          <img src="" alt="" id="star" />
+        </div>
+      </header>
+      <div class="component__body">
+        <h1 class="component__heading">How did we do?</h1>
+        <p class="component__text">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <form id="component__rating-form">
+          <div class="component__rating-container">
+            <label for="rating-1" class="component__rating-label">1</label>
+            <input
+              type="radio"
+              name="rating"
+              id="rating-1"
+              class="rating-input"
+              value="1"
+            />
+          </div>
+          <div class="component__rating-container">
+            <label for="rating-2" class="component__rating-label">2</label>
+            <input
+              type="radio"
+              name="rating"
+              id="rating-2"
+              class="rating-input"
+              value="2"
+            />
+          </div>
+          <div class="component__rating-container">
+            <label for="rating-3" class="component__rating-label">3</label>
+            <input
+              type="radio"
+              name="rating"
+              id="rating-3"
+              class="rating-input"
+              value="3"
+            />
+          </div>
+          <div class="component__rating-container">
+            <label for="rating-4" class="component__rating-label">4</label>
+            <input
+              type="radio"
+              name="rating"
+              id="rating-4"
+              class="rating-input"
+              value="4"
+            />
+          </div>
+          <div class="component__rating-container">
+            <label for="rating-5" class="component__rating-label">5</label>
+            <input
+              type="radio"
+              name="rating"
+              id="rating-5"
+              class="rating-input"
+              value="5"
+            />
+          </div>
+          <div class="component__button-container">
+            <button type="submit" class="component__button">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
