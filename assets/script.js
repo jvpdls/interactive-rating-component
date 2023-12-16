@@ -1,13 +1,19 @@
 /**
- * Selects a rating label and removes the "selected" class from other rating labels.
- * @param {HTMLElement[]} ratingLabels - An array of rating label elements.
- * @param {HTMLElement} ratingLabel - The rating label element to be selected.
+ * Selects the rating label of the selected input.
+ * @param {HTMLInputElement} ratingInput - The selected rating input.
+ * @returns {void}
  */
-function selectRatingLabel(ratingLabels, ratingLabel) {
-  for (var i = 0; i < ratingLabels.length; i++) {
-    ratingLabels[i].classList.remove("selected");
-  }
-  console.log(ratingLabel);
+function selectRatingLabel(ratingInput) {
+  var ratingLabel = document.querySelector(
+    ".component__rating-label[for=" + ratingInput.id + "]"
+  );
+
+  var ratingLabels = document.getElementsByClassName("component__rating-label");
+
+  Array.from(ratingLabels).forEach(function (ratingLabel) {
+    ratingLabel.classList.remove("selected");
+  });
+
   ratingLabel.classList.add("selected");
 }
 
@@ -72,15 +78,15 @@ function renderThankYouComponent(rating) {
 document.addEventListener("DOMContentLoaded", function () {
   var ratingForm = document.getElementById("component__rating-form");
   var ratingFormSubmitButton = document.getElementById("submit-button");
-  var ratingLabels = document.getElementsByClassName("component__rating-label");
+  var ratingInputs = document.getElementsByClassName("component__rating-input");
 
   /**
-   * Adds click event listeners to each rating label.
+   * Adds change event listener to the rating inputs.
+   * Selects the rating label of the selected input.
    */
-  Array.from(ratingLabels).forEach(function (ratingLabel) {
-    ratingLabel.addEventListener("click", function () {
-      console.log(ratingLabel.classList);
-      selectRatingLabel(ratingLabels, ratingLabel);
+  Array.from(ratingInputs).forEach(function (ratingInput) {
+    ratingInput.addEventListener("change", function () {
+      selectRatingLabel(ratingInput);
     });
   });
 
