@@ -4,6 +4,7 @@
   font-size: 62.5%;
   font-family: Overpass, sans-serif;
   --very-dark-blue: #131518;
+  --dark-blue: #262e38;
   --black-gradient: radial-gradient(
     98.96% 98.96% at 50% 0%,
     #232a34 0%,
@@ -12,13 +13,23 @@
   --organge: #fc7614;
   --pure-white: #fff;
   --light-grey: #969fad;
+  --medium-grey: #7c8798;
 }
 
 body {
   padding: 15.4rem 2.6rem 15.9rem 2.4rem;
+  display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--very-dark-blue);
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.margin-auto {
+  margin: auto;
 }
 
 .component {
@@ -36,23 +47,83 @@ body {
 .component__heading {
   color: var(--pure-white);
   font-size: 24px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
+}
+
+.component__result-message {
+  width: 16.8rem;
+  margin: 2.4rem 0 0.5rem 0;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2.25rem;
+  background-color: var(--dark-blue);
+  color: var(--organge);
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+
+.component__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.9rem;
 }
 
 .component__text {
   color: var(--light-grey);
   font-size: 1.4rem;
-  font-style: normal;
-  font-weight: 400;
   line-height: 2.2rem;
+}
+
+.component__ratings {
+  display: flex;
+  justify-content: space-between;
+}
+
+.component__rating-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 9999px;
+  color: var(--medium-grey);
+  background-color: var(--dark-blue);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  letter-spacing: 0.0175rem;
+}
+
+.component__rating-label:hover {
+  cursor: pointer;
+  background-color: var(--medium-grey);
+  color: var(--pure-white);
+}
+
+.component__rating-label.selected {
+  background-color: var(--organge);
+  color: var(--pure-white);
+}
+
+.component__rating-input {
+  display: none;
 }
 
 .component__button {
   width: 100%;
   height: 4.5rem;
-  border-radius: 22.5px;
+  margin-top: 1.9rem;
+  border: none;
+  border-radius: 2.25rem;
   background: var(--organge);
   cursor: pointer;
+  color: var(--pure-white);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.1867rem;
+  text-transform: uppercase;
+}
+
+.component__button:hover {
+  background-color: var(--pure-white);
+  color: var(--organge);
 }
