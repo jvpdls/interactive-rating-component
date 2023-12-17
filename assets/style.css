@@ -17,10 +17,7 @@
 }
 
 body {
-  padding: 15.4rem 2.6rem 15.9rem 2.4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 0 2.6rem;
   background-color: var(--very-dark-blue);
 }
 
@@ -58,13 +55,12 @@ body {
   background-color: var(--dark-blue);
   color: var(--organge);
   font-size: 1.4rem;
-  line-height: 2.2rem;
 }
 
 .component__body {
   display: flex;
   flex-direction: column;
-  gap: 1.9rem;
+  gap: 1.5rem;
 }
 
 .component__text {
@@ -76,6 +72,11 @@ body {
 .component__ratings {
   display: flex;
   justify-content: space-between;
+}
+
+.component__rating-container {
+  width: 4.2rem;  
+  height: 4.2rem;
 }
 
 .component__rating-label {
@@ -114,7 +115,7 @@ body {
   height: 4.5rem;
   margin-top: 1.9rem;
   border: none;
-  border-radius: 2.25rem;
+  border-radius: 22.5px;
   background: var(--organge);
   cursor: pointer;
   color: var(--pure-white);
@@ -127,4 +128,62 @@ body {
 .component__button:hover {
   background-color: var(--pure-white);
   color: var(--organge);
+}
+
+@media screen and (min-width: 90em) {
+  .component {
+    max-width: 41.2rem;
+    padding: 4rem 3.2rem;
+    border-radius: 30px;
+    gap: 3rem;
+  }
+
+  #star {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  #rating-image {
+    width: 16.2rem;
+    height: 10.8rem;
+  }
+
+  .component__heading {
+    font-size: 2.8rem;
+  }
+
+  .component__result-message {
+    font-size: 1.5rem;
+    margin: 3.2rem 0 1.3rem 0;
+  }
+
+  .component__body {
+    gap: 1rem;
+  }
+
+  .component__text {
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+  }
+
+  .component__ratings {
+    margin-top: 1.4rem;
+  }
+
+  .component__rating-container {
+    width: 5.1rem;
+    height: 5.1rem;
+  }
+
+  .component__rating-label {
+    width: 5.1rem;
+    height: 5.1rem;
+    font-size: 1.6rem;
+  }
+
+  .component__button {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    margin-top: 3.2rem;
+  }
 }
