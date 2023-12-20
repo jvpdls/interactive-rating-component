@@ -8,4 +8,5 @@ This project contains an interactive rating panel built using HTML, CSS, and van
 - Provides visual feedback to indicate the selected rating.
 - Easy to integrate into any web application.
 
-## Screenshots
+## Live Preview
+See a live preview of this project [here](https://jvpdls.github.io/interactive-rating-component/).
