@@ -133,7 +133,7 @@ body {
 @media screen and (min-width: 90em) {
   .component {
     max-width: 41.2rem;
-    padding: 4rem 3.2rem;
+    padding: 3.2rem;
     border-radius: 30px;
     gap: 3rem;
   }
