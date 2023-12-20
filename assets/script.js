@@ -55,7 +55,7 @@ function renderThankYouComponent(rating) {
   var component = document.querySelector(".component");
   component.innerHTML = `
     <header class="component__header text-align-center margin-auto">
-        <img src="/assets/img/payment-device.webp" alt="Ilustração de um dispositivo de pagamento" id="rating-image" width="144px" height="96px"/>
+        <img src="assets/img/payment-device.webp" alt="Ilustração de um dispositivo de pagamento" id="rating-image" width="144" height="96"/>
         <div class="component__result-container">
             <p class="component__result-message">
             You selected <span>${rating}</span> out of 5
